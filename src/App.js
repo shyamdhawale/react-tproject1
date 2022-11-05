@@ -1,37 +1,15 @@
-import "./App.css";
-import React from "react";
+// import "./App.css";
+import React, { Suspense} from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import MasterPrechecklist from "./components/Masterdata/MasterPrechecklist";
-import Inpectionreport from "./components/Masterdata/Inpectionreport";
-import HydrostaticTestReport from "./components/Masterdata/HydrostaticTestReport";
+import MasterDataPage from "./components/Masterdata/MasterDataPage";
+
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-            <li>
-              <Link to="/master">New Master Data</Link>
-            </li>
-            <li>
-              <Link to="/inpection">Inpection Report</Link>
-            </li>
-            <li>
-              <Link to="/hydrostatic">Hydrostatic Test Report</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <Router>
+    <Layout>
+      <Suspense fallback={<p>loading..</p>} >
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
@@ -42,20 +20,18 @@ function App() {
             <Users />
           </Route>
           <Route path="/master">
-            <MasterPrechecklist />
-          </Route>
-          <Route path="/inpection">
-            <Inpectionreport />
-          </Route>
-          <Route path="/hydrostatic">
-            <HydrostaticTestReport />
-          </Route>
+            <MasterDataPage />
+          </Route>          
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
-      </div>
+        </Switch>        
+
+      </Suspense>
+    
+    </Layout>
     </Router>
+
   );
 }
 

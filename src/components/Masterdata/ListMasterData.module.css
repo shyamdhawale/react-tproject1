@@ -1,0 +1,45 @@
+.report {
+    border-collapse: collapse;
+   width: 100%;
+   overflow-x:auto
+ }
+ 
+ .report td,
+ .report th {
+   /* border: 1px solid #ddd; */
+   padding: 8px;
+   border-bottom: 1px solid black;
+ }
+ 
+ .report tr:nth-child(even) {
+   background-color: #f2f2f2;
+ }
+ 
+ .report tr:hover {
+   background-color: #ddd;
+ }
+ 
+ .report th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   /* background-color: #5D8233; */
+   /* color: white; */
+ }
+ /* Add new button */
+ .uploadbtn button {
+   font: inherit;
+   cursor: pointer;
+   background-color: rgb(118,6,255);
+   /* background-color: transparent; */
+   border: 1px solid #fff8f6;
+   padding: 0.5rem 2rem;
+   border-radius: 25px;
+   margin-left: 1rem;
+   color: white;
+ }
+ .uploadbtn button:hover,
+ .uploadbtn button:active {
+   background-color: rgb(86, 9, 180);  
+ }
+ 

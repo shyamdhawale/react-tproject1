@@ -36,9 +36,9 @@ const ObservationAddDeleteRow = ({ saveData }) => {
       <tr>
         <th>HYDRO SIDE</th>
         <th>GAUGE ID NO.</th>
-        <th>GAUGE RANGE KG/CM^2</th>
+        <th>GAUGE RANGE KG/CM<sup>2</sup> </th>
         <th>CALIBRATION VALID UPTO</th>
-        <th>OBSERVED PRESSURE KG/CM^2</th>
+        <th>OBSERVED PRESSURE KG/CM<sup>2</sup></th>
       </tr>
       {/* </thead> */}
       <ObservationTable

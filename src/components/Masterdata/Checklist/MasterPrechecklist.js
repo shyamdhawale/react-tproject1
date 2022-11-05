@@ -43,7 +43,7 @@ const MasterPrechecklist = () => {
       remarks: remarkData,
     };
 
-    fetch("http://192.168.1.13:3001/template", {
+    fetch("http://192.168.1.13:3001/api/master/checklist", {
       method: "POST",
       body: JSON.stringify(preData),
       headers: {
